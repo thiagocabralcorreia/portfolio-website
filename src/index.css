@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@300;400;600;700&display=swap");
+
+@layer base {
+  html {
+    font-family: "Inter", sans-serif;
+  }
+
+  body {
+    background-color: #000000;
+  }
+
+  .font-poppins {
+    font-family: "Poppins", sans-serif;
+  }
+
+  .font-inter {
+    font-family: "Inter", sans-serif;
+  }
+
+  .max-width {
+    @apply w-10/12 max-w-[1200px];
+  }
+
+  .primary-font-colors {
+    @apply dark:text-white text-black dark:hover:text-primaryDark hover:text-primary;
+  }
+
+  .primary-background-colors {
+    @apply dark:bg-primaryDarkBackground bg-white;
+  }
+
+  .section-title {
+    @apply text-3xl sm:text-5xl xl:text-4xl font-semibold max-lg:mb-8 mb-12 font-poppins dark:text-white text-black;
+  }
+
+  .section-text {
+    @apply text-lg mx-auto mb-8 dark:text-neutral-300 text-neutral-800;
+  }
+
+  .header-link {
+    @apply text-[16px] dark:text-white text-black dark:hover:text-primaryDark hover:text-primary duration-500 cursor-pointer font-poppins;
+  }
+
+  @keyframes blinking {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .blinking {
+    animation: blinking 1s infinite;
+  }
+}
+
+::selection {
+  background-color: #404142;
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background-color: #000000;
+  color: #171717;
+}
